@@ -259,6 +259,7 @@ const Dashboard = () => {
             }}
             options={{
               maintainAspectRatio: false,
+              spanGaps: true,
               plugins: {
                 legend: {
                   display: false,
