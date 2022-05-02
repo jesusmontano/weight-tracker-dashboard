@@ -30,7 +30,7 @@ const Register = () => {
   const [isRepeatPasswordDirty, setIsRepeatPasswordDirty] = useState(false)
   const navigate = useNavigate()
 
-  const handleClick = async () => {
+  const handleSubmit = async () => {
     try {
       setIsLoading(true)
       await axios.post('http://localhost:4000/register', {
@@ -121,7 +121,7 @@ const Register = () => {
                     <CButton
                       type="submit"
                       color="success"
-                      onClick={() => handleClick()}
+                      onClick={() => handleSubmit()}
                       disabled={
                         isLoading ||
                         !validator.isEmail(email) ||
